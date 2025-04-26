@@ -12,7 +12,7 @@ public class SharedResource {
         this.bufferSize = bufferSize;
     }
 
-    public synchronized void produce(int data) throws Exception{
+    public synchronized void produce(int data){
         //we have to check if the queue is full or not
         try{
             while(queue.size()==bufferSize){
@@ -27,7 +27,7 @@ public class SharedResource {
         notify();
     }
 
-    public synchronized int consume() throws Exception {
+    public synchronized void consume(){
         try{
             while(queue.isEmpty()){
                 System.out.println("Queue is empty...going to wait");
@@ -39,6 +39,5 @@ public class SharedResource {
         int val = queue.poll();
         System.out.println("Data "+val+" has been consumed");
         notify();
-        return val;
     }
 }
