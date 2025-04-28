@@ -23,17 +23,9 @@ public class WeatherStation implements Station{
         this.deviceList.add(d);
     }
 
-    public void setTempreature(int temp){
+    public void setTemperature(int temp){
         System.out.println("The temperature is: "+temp);
         this.temp = temp;
         notifyDevices();
-    }
-
-    public List<Device> getDeviceList() {
-        return deviceList;
-    }
-
-    public void setDeviceList(List<Device> deviceList) {
-        this.deviceList = deviceList;
     }
 }
