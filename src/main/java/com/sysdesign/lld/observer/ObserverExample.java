@@ -5,8 +5,8 @@ public class ObserverExample {
         WeatherStation w = new WeatherStation();
         w.addDevice(new PhoneDevice());
         w.addDevice(new TabletDevice());
-        w.setTempreature(40);
-        w.setTempreature(33);
-        w.setTempreature(12);
+        w.setTemperature(40);
+        w.setTemperature(33);
+        w.setTemperature(12);
     }
 }
