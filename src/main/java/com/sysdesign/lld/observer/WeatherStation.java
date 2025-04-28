@@ -4,7 +4,7 @@ import java.util.List;
 
 public class WeatherStation implements Station{
 
-    private List<Device> deviceList;
+    private final List<Device> deviceList;
     private int temp;
 
     public WeatherStation(){
