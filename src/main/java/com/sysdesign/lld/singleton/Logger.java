@@ -1,6 +1,6 @@
 package com.sysdesign.lld.singleton;
 
-public class Logger {
+class Logger {
 
     private static Logger instance;
 
@@ -9,13 +9,12 @@ public class Logger {
     }
 
     public static Logger getInstance() {
-        if(instance==null) {
+        if(instance==null)
             instance = new Logger();
-        }
         return instance;
     }
 
-    public void log(String text) {
+    public static void log(String text) {
         System.out.println("LOG: "+text);
     }
 }
